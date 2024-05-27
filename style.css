@@ -1,0 +1,188 @@
+@charset "UTF-8";
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: white;
+  --bg-url: url(assets/bg-mobile.jpg);
+  --color: rgba(255, 255, 255, 0.5);
+  --color2: rgba(255, 255, 255, 0.1);
+  --color3: rgba(255, 255, 255, 0.05);
+  --social-hover: rgba(255, 255, 255, 0.2);
+  --swicth: url(assets/moon-stars.svg);
+}
+
+.light{
+  --text-color: black;
+  --bg-url: url(assets/bg-mobile-light.jpg);
+  --color: rgba(0, 0, 0, 0.5);
+  --color2: rgba( 0,0, 0, 0.1);
+  --color3: rgba(0, 0, 0, 0.05);
+  --social-hover: rgba( 0,0, 0, 0.2);
+  --swicth: url(assets/sun.svg);
+}
+
+body{
+  /*
+  background-color: black;
+  background-image: url(/assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  /background-size: cover;
+  */
+
+  background: var(--bg-url) no-repeat top center/cover;
+}
+
+
+body * {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+/* Contain */
+
+.contain {
+  width: 360px;
+  margin: 56px auto 0px;
+  padding: 0 24px;
+}
+
+.contain ul li{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+ul li a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 16px 24px;
+
+  background-color: var(--color2);
+  border: 1px solid var(--color);
+  border-radius: 8px;
+  
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: background .23s;
+}
+
+ul li a:hover{
+  background-color: var(--color3);
+  border: 1.5px solid var(--text-color);
+  border-radius: 9px;
+}
+
+/* Profile */
+
+.profile{
+  text-align: center;
+  padding: 24px;
+}
+
+.profile > img{
+  width: 112px;
+
+  border-radius: 50%;
+  border: 1px solid darkgray;
+}
+
+.profile a{
+  margin-top: 8px;
+  line-height: 24px;
+  text-align: center;
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 24px 0;
+}
+
+/* Switch */
+
+#switch{
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+
+#switch button{
+  background: white var(--swicth) no-repeat center;
+  width: 32px;
+  height: 32px;
+  border: 0px;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.light #switch button{
+  right: 0;
+  left: initial;
+}
+
+#switch span{
+  display: block;
+
+  width: 64px;
+  height: 24px;
+  background: var(--color3);
+  border: 1px solid var(--color2);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+/*Rede Social*/
+
+#rd{
+  display: flex;
+  padding: 24px 0;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 24px;
+}
+
+#rd a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  border-radius: 50%;
+  transition: background .15s;
+}
+
+#rd a:hover{
+  background-color: var(--social-hover);
+}
+
+/* Roda pé */
+
+footer{
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+}
